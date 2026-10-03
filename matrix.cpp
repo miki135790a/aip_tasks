@@ -3,6 +3,8 @@
 
 int main() {
     int rows, cols;
+
+    std::cout << "Enter the number of rows and columns: ";
     if (!(std::cin >> rows >> cols)) {
         return 1;
     }
@@ -26,6 +28,7 @@ int main() {
         }
     }
 
+    std::cout << "Enter the matrix elements: ";
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
             if (!(std::cin >> matrix[i][j])) {
@@ -38,6 +41,7 @@ int main() {
         }
     }
 
+    std::cout << "Transposed matrix:" << std::endl;
     for (int j = 0; j < cols; ++j) {
         for (int i = 0; i < rows; ++i) {
             std::cout << matrix[i][j];
